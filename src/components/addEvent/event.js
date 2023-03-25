@@ -93,7 +93,7 @@ function AddEvent(props){
             <div className='home_heder'>
                 <ul className='nav_bar'>
                     <Link to="/home"><li>Home</li></Link>
-                    <li>Add Notes</li>
+                    <Link to="/event" ><li>Add Notes</li></Link>
                     <li>Delete All</li>
                     <li>Export</li>
                 </ul>
