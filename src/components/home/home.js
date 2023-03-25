@@ -69,7 +69,7 @@ const url = "https://notes-event.onrender.com/login/user/event/get"
             {get_update?<UpdateEvent idx={idx} data={events}/>:""}
             {get_update?"":<>
             <div className='search_bar'>
-                <input type={'search'} id="serch" placeholder='Search' onChange={()=>{searchData(e.target.value)}}/>
+                <input type={'search'} id="serch" placeholder='Search' onChange={(e)=>{searchData(e.target.value)}}/>
             </div>
             <div className='main_data_cont'>
                 {events?.map((val,i)=>{
