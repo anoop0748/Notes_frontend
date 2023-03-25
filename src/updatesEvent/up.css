@@ -8,9 +8,11 @@
 .width{
     width:75%;
     margin-top: 20px;
+    background-color: #fff;
+    color: black;
     
 }
-.title{
+.uptitle{
     height: 15vh;
 }
 .dis{

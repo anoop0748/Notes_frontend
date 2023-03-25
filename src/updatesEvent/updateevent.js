@@ -11,7 +11,7 @@ function UpdateEvent(props){
     console.log(props.idx,props.data)
     const data = props.data[props.idx];
     const [update_event,set_update_event] = useState(false);
-    const navigate = useNavigate()
+    let navigate = useNavigate()
     let i = props.idx
     async function fun_delete(){
         let auth = {
@@ -37,7 +37,7 @@ function UpdateEvent(props){
         <>
             {update_event?<AddEvent up_event={update_event} data={data}/>:""}
             <div className="update_cont">
-                <div className="width title ">
+                <div className="width uptitle ">
                     <h2>{data.title}</h2>
                 </div>
                 <div className="width dis">

@@ -11,7 +11,7 @@ const upurl = "https://notes-event.onrender.com/login/user/event/put"
 function AddEvent(props){
     const on_upd = props.up_event
     const token = window.localStorage.getItem('token');
-    const navigate = useNavigate();
+    let  navigate = useNavigate();
     const [title, setTitle] = useState("");
     const [disc,setDisc] = useState("");
     const [ startT, setStartT] = useState("");
