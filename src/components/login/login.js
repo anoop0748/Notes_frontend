@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from 'axios'
-import { useNavigate } from "react-router-dom";
-const url = "https://notes-event.onrender.com/login/user"
+import { Link, useNavigate } from "react-router-dom";
+const url = "https://notes-event.onrender.com/login/user/event/get"
+// const url = "http://localhost:3000/login/user/event/get"
 
 
 function Login (){
@@ -48,6 +49,9 @@ function Login (){
             </div>
             <div>
                 <i>Forget password</i>
+            </div>
+            <div>
+                <Link to={'/register'}><button>Register</button></Link>
             </div>
         </div>
         </div>
