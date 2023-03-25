@@ -1,8 +1,11 @@
 import React, { useState } from "react"
 import axios from "axios";
+import './reg.css'
+import { Link, useNavigate } from "react-router-dom";
 const url = "https://notes-event.onrender.com/register/user"
 
 function Register(){
+    let navigate = useNavigate()
     const [email,setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [con_pass,setConPass] = useState("");
@@ -22,32 +25,41 @@ function Register(){
             password:password
         }
         let post_data = await axios.post(url,data);
+        if(post_data.data.status === "SuccessFull"){
+            navigate('/')
+        }
+        else{
+            return alert(post_data.data.status)
+        }
 
         console.log(post_data.data)
         e.preventDefault();
     }
 
    return(
-    <div>
-        <div>
-            <div>
+    <div className="reg_main">
+        <div className="reg_card">
+            <div >
                 <h2>SIGN UP</h2>
             </div>
-            <div>
-                <input type={'email'} placeholder="Email" onInput={(e)=>{setEmail(e.target.value)}} />
+            <div className="regWidth80">
+                <input type={'email'} placeholder="Email" onInput={(e)=>{setEmail(e.target.value)}} className="reginputbox"  />
             </div>
-            <div>
-                <input type={'password'} placeholder="Password" onInput={(e)=>{setPassword(e.target.value)}}/>
+            <div className="regWidth80">
+                <input type={'password'} placeholder="Password" onInput={(e)=>{setPassword(e.target.value)}} className="reginputbox"/>
             </div>
-            <div>
-                <input type={'password'} placeholder="Confrim Password"  onInput={(e)=>{setConPass(e.target.value)}}/> 
+            <div className="regWidth80">
+                <input type={'password'} placeholder="Confrim Password"  onInput={(e)=>{setConPass(e.target.value)}} className="reginputbox"/> 
             </div>
-            <div>
+            <div className="regWidth80">
                 <input type={'checkbox'}  onChange={(e)=>{setCheck(e.target.value)}}/>
                 <label  > I agree with <b>Terms & conditions.</b></label>
             </div>
-            <div>
-                <button onClick={(e)=>{user_register(e)}}>CONTINUE</button>
+            <div className="regWidth80">
+                <button onClick={(e)=>{user_register(e)}} className="regbuttons continue">CONTINUE</button>
+            </div>
+            <div className="regWidth80">
+                <Link to={'/'}><button className="regbuttons sign_reg">Alredy Register</button></Link>
             </div>
         </div>
     </div>

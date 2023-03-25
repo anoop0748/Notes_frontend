@@ -1,0 +1,45 @@
+.add_notes-cont{
+    display: flex;
+    width: 100%;
+    height: 95vh;
+    background-color: rgb(98, 153, 135);
+    justify-content: center;
+    
+}
+.title_cont{
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.title_inp{
+    width: 100%;
+    height: 2rem;
+}
+.desc_inp{
+    width: 100%;
+    height: 10rem;
+}
+.notes_card{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+#add_event_btn{
+    width: 100%;
+    height: 3rem;
+    font-size: 30px;
+    border-radius: 30px;
+    background-color: rgb(55, 55, 247);
+    color: #fff;
+}
+.time_cont{
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

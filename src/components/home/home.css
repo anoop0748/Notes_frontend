@@ -1,0 +1,74 @@
+.home_main_cont{
+    width: 100%;
+    height: 97vh;
+    margin: 0px;
+    background-color: rgb(109, 61, 153);
+    overflow-y: scroll;
+}
+.home_heder{
+    width: 100%;
+    height: 2rem;
+    background-color: rgba(34, 23, 23, 0.938);
+    color: #fff;
+    margin-top: -16px;
+    line-height: 30px;
+}
+.nav_bar{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    
+}
+.nav_bar li{
+    margin-left: 30px;
+    
+}
+.search_bar{
+    width: 90%;
+    height: 2rem;
+    margin-top: 2rem;
+    
+    
+}
+#serch{
+    width: 100%;
+    height: 2.5rem;
+    margin-left: 5%;
+    border-radius: 30px;
+    border-color: #fff;
+    outline-color: rgb(103, 61, 153);
+}
+.main_data_cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+.data_card_cont{
+    width: 100%;
+    height: 8rem;
+    background-color: #fff;
+    color: black;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.date_time{
+    margin: 5px 10px;
+    font-size: small;
+}
+.title{
+    margin: 5px 10px;
+}
+.discription{
+    margin: 5px 10px;
+    font-size: 18px;
+}
+#homeLink{
+    color: #fff;
+}
+#addnoteLink{
+    color:#fff;
+}
+.nav_bar :link{
+    text-decoration: none;
+}

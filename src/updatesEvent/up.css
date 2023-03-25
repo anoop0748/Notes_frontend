@@ -1,0 +1,22 @@
+.update_cont{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.width{
+    width:75%;
+    margin-top: 20px;
+    
+}
+.title{
+    height: 15vh;
+}
+.dis{
+    height: 30vh;
+}
+.btn{
+    width: 75%;
+    height: 10vh;
+}

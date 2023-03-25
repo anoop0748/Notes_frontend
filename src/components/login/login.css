@@ -1,0 +1,52 @@
+.login_cont{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: hsl(229, 32%, 51%);
+    box-sizing: border-box;
+}
+.login_card_cont{
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(247, 239, 239);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 10px hsl(346, 12%, 35%);
+}
+.width80{
+    width: 80%;
+}
+.inputbox{
+    width: 100%;
+    height: 2rem;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid gray;
+}
+.buttons{
+    width: 100%;
+    height: 3rem;
+    border-radius: 30px;
+}
+.sign_color{
+    background-color: hsl(231, 64%, 53%);
+    color: #fff;
+    border-color: hsl(229, 32%, 51%);
+    font-size: x-large;
+}
+.reg_color{
+    background-color: hsl(352, 65%, 47%);
+    color: #fff;
+    width: 100%;
+    font-size: x-large;
+    border-color: hsl(352, 65%, 47%);
+}
+.blue_color{
+    color: rgb(35, 35, 221);
+}
