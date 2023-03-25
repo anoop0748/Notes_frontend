@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { set } from 'mongoose';
 import react, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import UpdateEvent from '../../updatesEvent/updateevent';
@@ -26,6 +27,16 @@ const url = "https://notes-event.onrender.com/login/user/event/get"
             setEvents(data.data.data[0].data)      
         }
     
+    }
+    function searchData(val){
+        let arr = [];
+        for(let i = 0; i < events.length; i++){
+            if(events[i] === val){
+                arr.push(events[i])
+            }
+        }
+        setEvents(arr)
+
     }
     useEffect(()=>{
         if(!token){
@@ -58,7 +69,7 @@ const url = "https://notes-event.onrender.com/login/user/event/get"
             {get_update?<UpdateEvent idx={idx} data={events}/>:""}
             {get_update?"":<>
             <div className='search_bar'>
-                <input type={'search'} id="serch" placeholder='Search'/>
+                <input type={'search'} id="serch" placeholder='Search' onChange={()=>{searchData(e.target.value)}}/>
             </div>
             <div className='main_data_cont'>
                 {events?.map((val,i)=>{
